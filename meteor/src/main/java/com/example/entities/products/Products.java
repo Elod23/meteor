@@ -20,7 +20,7 @@ public class Products {
 		@NotNull
 		private String SecondaryMU;
 		@NotNull
-		private float price;
+		private float Price;
 		@NotNull
 		private float CantitateStoc;
 		@NotNull
@@ -65,11 +65,11 @@ public class Products {
 		}
 
 		public float getPrice() {
-			return price;
+			return Price;
 		}
 
 		public void setPrice(float price) {
-			this.price = price;
+			this.Price = price;
 		}
 
 		public float getCantitateStoc() {

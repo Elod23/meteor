@@ -14,6 +14,7 @@ public class CartProducts {
 		@JoinColumn(name="CartID")
 		private Integer CartID;
 		
+		@Id
 		@ManyToOne
 		@JoinColumn(name="ProductID")
 		private Integer ProductId;

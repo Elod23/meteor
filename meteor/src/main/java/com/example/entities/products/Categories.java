@@ -8,34 +8,34 @@ import javax.validation.constraints.NotNull;
 public class Categories {
 
 		@Id
-		private Integer categoryID;
+		private Integer CategoryID;
 		@NotNull
-		private String name;
+		private String Name;
 		
-		private String description;
+		private String Description;
 
 		public Integer getCategoryID() {
-			return categoryID;
+			return CategoryID;
 		}
 
 		public void setCategoryID(Integer categoryID) {
-			this.categoryID = categoryID;
+			this.CategoryID = categoryID;
 		}
 
 		public String getName() {
-			return name;
+			return Name;
 		}
 
 		public void setName(String name) {
-			this.name = name;
+			this.Name = name;
 		}
 
 		public String getDescription() {
-			return description;
+			return Description;
 		}
 
 		public void setDescription(String description) {
-			this.description = description;
+			this.Description = description;
 		}
 		
 		

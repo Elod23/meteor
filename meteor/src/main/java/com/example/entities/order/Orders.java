@@ -15,7 +15,7 @@ public class Orders {
 	private Integer OrderID;
 	
 	@ManyToOne
-	private int CustomerID;
+	private Integer CustomerID;
 	@NotNull
 	private String BillingName;
 	
@@ -28,12 +28,12 @@ public class Orders {
 	private String PurchaseDate;
 	
 	@OneToMany(mappedBy="OrderStatus")
-	private int OrderStatusCode;
+	private Integer OrderStatusCode;
 	
 	@ManyToOne
-	private int BillingAddressID;
+	private Integer BillingAddressID;
 	
-	private int DeliveryAddressID;
+	private Integer DeliveryAddressID;
 
 	public int getOrderID() {
 		return OrderID;
@@ -43,7 +43,7 @@ public class Orders {
 		OrderID = orderID;
 	}
 
-	public int getCustomerID() {
+	public Integer getCustomerID() {
 		return CustomerID;
 	}
 
@@ -83,7 +83,7 @@ public class Orders {
 		PurchaseDate = purchaseDate;
 	}
 
-	public int getOrderStatusCode() {
+	public Integer getOrderStatusCode() {
 		return OrderStatusCode;
 	}
 
@@ -91,18 +91,19 @@ public class Orders {
 		OrderStatusCode = orderStatusCode;
 	}
 
-	public int getBillingAddressID() {
+	public Integer getBillingAddressID() {
 		return BillingAddressID;
 	}
+	
 
 	public void setBillingAddressID(int billingAddressID) {
 		BillingAddressID = billingAddressID;
 	}
 
-	public int getDeliveryAddressID() {
+	public Integer getDeliveryAddressID() {
 		return DeliveryAddressID;
 	}
-
+	
 	public void setDeliveryAddressID(int deliveryAddressID) {
 		DeliveryAddressID = deliveryAddressID;
 	}
