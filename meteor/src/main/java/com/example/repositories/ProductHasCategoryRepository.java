@@ -8,8 +8,16 @@ import com.example.entities.products.ProductHasCategory;
 
 public interface ProductHasCategoryRepository extends JpaRepository<ProductHasCategory, Integer>{
 	
-	List<ProductHasCategory> findAllByProductID(Integer ProductID);
+	ProductHasCategory findByProductID(Integer ProductID);
 	
-	List<ProductHasCategory> findAllByCategoryID(Integer CategoryID);
+	List<ProductHasCategory> findAllByProductIDGreaterThan(Integer ProductID);
+	
+	List<ProductHasCategory> findAllByProductIDLesserThan(Integer ProductID);
+	
+	List<ProductHasCategory> findByCategoryID(Integer CategoryID);
+	
+	List<ProductHasCategory> findAllByCategoryIDGreaterThan(Integer CategoryID);
+	
+	List<ProductHasCategory> findAllByCategoryIDLesserThan(Integer CategoryID);
 
 }
