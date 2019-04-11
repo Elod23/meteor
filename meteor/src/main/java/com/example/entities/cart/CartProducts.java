@@ -1,6 +1,8 @@
 package com.example.entities.cart;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -9,42 +11,41 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class CartProducts {
 
-		@ManyToOne
-		@Id
-		@JoinColumn(name="CartID")
-		private Integer CartID;
-		
-		@Id
-		@ManyToOne
-		@JoinColumn(name="ProductID")
-		private Integer ProductId;
-		
-		@NotNull
-		private int Quantity;
+	@ManyToOne
+	@Id
+	@JoinColumn(name = "CartID")
+	private Integer CartID;
 
-		public Integer getCartID() {
-			return CartID;
-		}
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "ProductID")
+	private Integer ProductID;
 
-		public void setCartID(Integer cartID) {
-			CartID = cartID;
-		}
+	@NotNull
+	private int Quantity;
 
-		public Integer getProductId() {
-			return ProductId;
-		}
+	public Integer getCartID() {
+		return CartID;
+	}
 
-		public void setProductId(Integer productId) {
-			this.ProductId = productId;
-		}
+	public void setCartID(Integer cartID) {
+		CartID = cartID;
+	}
 
-		public int getQuantity() {
-			return Quantity;
-		}
+	public Integer getProductId() {
+		return ProductID;
+	}
 
-		public void setQuantity(int quantity) {
-			Quantity = quantity;
-		}
-		
-		
+	public void setProductId(Integer productId) {
+		this.ProductID = productId;
+	}
+
+	public int getQuantity() {
+		return Quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		Quantity = quantity;
+	}
+
 }

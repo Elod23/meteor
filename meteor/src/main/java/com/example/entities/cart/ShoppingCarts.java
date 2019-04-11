@@ -15,7 +15,7 @@ public class ShoppingCarts {
 		private Integer CartID;
 		@NotNull
 		@OneToOne
-		private Integer CustomerId;
+		private Integer CusttomerID;
 		@NotNull
 		private LocalDateTime CartCreated;
 		@OneToMany(mappedBy="ShoppingCartStatusID")
@@ -35,11 +35,11 @@ public class ShoppingCarts {
 		}
 
 		public Integer getCustomerId() {
-			return CustomerId;
+			return CusttomerID;
 		}
 
 		public void setCustomerId(Integer customerId) {
-			CustomerId = customerId;
+			CusttomerID = customerId;
 		}
 
 		public LocalDateTime getCartCreated() {

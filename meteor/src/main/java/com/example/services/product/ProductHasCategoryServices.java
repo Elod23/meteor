@@ -34,4 +34,8 @@ public class ProductHasCategoryServices {
 		productCategoryRepo.deleteAll();
 	}
 	
+	public void saveProduct(ProductHasCategory catego) {
+		productCategoryRepo.save(catego);
+	}
+	
 }

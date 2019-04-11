@@ -1,6 +1,9 @@
 package com.example.entities.cart;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
@@ -8,8 +11,11 @@ import javax.validation.constraints.NotNull;
 public class ShoppingCartStatus {
 
 		@Id
+		@Column(name="shoppingcartstatusID")
+		@GeneratedValue(strategy = GenerationType.AUTO)
 		private Integer ShoppingCartStatusID;
 		@NotNull
+		@Column(name="shoppingcartstatusDescription")
 		private String ShoppingCartStatusDescription;
 		
 		public Integer getShoppingCartStatusID() {

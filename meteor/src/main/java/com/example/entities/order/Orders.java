@@ -1,6 +1,8 @@
 package com.example.entities.order;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -12,6 +14,7 @@ public class Orders {
 	
 	@Id
 	@OneToMany(mappedBy="OrderID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer OrderID;
 	
 	@ManyToOne
