@@ -2,6 +2,8 @@ package com.example.demo.entities.order;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,9 +14,8 @@ import javax.validation.constraints.NotNull;
 public class OrderedProducts {
 
 	@Id
-	@Column(name = "OrderedProductID")
-	private Integer orderedProductId;
-
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer OrderedProductId;
 	@OneToOne
 	@Column(name = "ProductId")
 	private Integer productId;
@@ -64,14 +65,6 @@ public class OrderedProducts {
 
 	public void setTVA(int tVA) {
 		TVA = tVA;
-	}
-
-	public Integer getOrderedProductId() {
-		return orderedProductId;
-	}
-
-	public void setOrderedProductId(Integer orderedProductId) {
-		this.orderedProductId = orderedProductId;
 	}
 
 	public Integer getProductId() {
